@@ -2,13 +2,15 @@
 
 ### Des : 
 
-![alt text](image-1.png) 
+![image](https://github.com/KMANVK/vishwactf-2024/assets/94669750/c73c2b83-6009-414b-89b6-2dedad6f13cc)
+
 
 ### Sol : 
 
 + Bài này liên quan đến usb mouse : 
 
-![alt text](image-2.png)
+![image](https://github.com/KMANVK/vishwactf-2024/assets/94669750/74a106ef-c584-4916-8988-d0c6df94eb74)
+
 
 #### C1 : 
 
