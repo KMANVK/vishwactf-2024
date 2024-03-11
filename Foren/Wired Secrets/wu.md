@@ -10,6 +10,8 @@
 
 ![alt text](image-2.png)
 
+#### C1 : 
+
 + Mình dùng tshark extract lấy data của nó ra :  
 
 `$ tshark -r ./okay10.pcapng -Y 'frame.cap_len == 31' -T fields -e usbhid.data`
@@ -72,5 +74,21 @@ img.save("image.png")
 + Sau khi vẽ xong thì hình hơi xấu nên nhìn ra flag thì cũng khó @@. 
 
 ![alt text](image-4.png)
+
+#### C2 : 
+
+https://github.com/WangYihang/USB-Mouse-Pcap-Visualizer
+
+```
+$tshark -r okay10.pcapng -w p1_flag.pcap "frame.number >= 12000 && frame.number <= 14500"
+$tshark -r okay10.pcapng -w p2_flag.pcap "frame.number >= 15000"
+
+$poetry run python usb-mouse-pcap-visualizer.py -i p1_flag.pcap
+$poetry run python usb-mouse-pcap-visualizer.py -i p2_flag.pcap
+```
+![image](https://github.com/KMANVK/vishwactf-2024/assets/94669750/3cce8cdd-e681-4ec8-b667-b82029859a53)
+
+![image](https://github.com/KMANVK/vishwactf-2024/assets/94669750/6d108137-8297-47db-80f4-0b864d5a7050)
+
 
 ### FLAG : `VishwaCTF{KUD0SD3T3CTIVE}`
